@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from 'react-data-table-component-extensions';
-
+import Button from '@material-ui/core/Button';
 const tablaUser = [
     {id : '1', nombres : 'Jordy', apellidos : 'Urrutia',score : 'Medium',tipo_doc : 'DNI',num_doc : '70767761',nom_tar : '5'},
     {id : '2', nombres : 'Jordy', apellidos : 'Urrutia',score : 'Medium',tipo_doc : 'DNI',num_doc : '70767761',nom_tar : '5'},
@@ -59,6 +59,11 @@ const columnas = [
         name: 'Nombre Tarjeta',
         selector: 'nom_tar',
         sortable: true
+    },
+    {
+        name: 'Opción',
+        cell: () => <Button variant="contained" color="primary">Detalle</Button>,
+        button: true,
     }
 ]
 

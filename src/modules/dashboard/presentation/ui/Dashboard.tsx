@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import ListUser from './components/ListUser';
 import SliderMenu from './components/Sidebar';
 import Header from './components/Header';
+import DetailUser from './components/DetailScoTrans';
 
 const useStyles= makeStyles(()=>({
     root:{
@@ -26,7 +27,8 @@ function Dashboard(props:any) {
                 </Grid>
                 <Grid item md={9}>
                 <Header />
-                <ListUser />
+                {/* <ListUser /> */}
+                <DetailUser />
                 </Grid>
             </Grid>            
         </div>
